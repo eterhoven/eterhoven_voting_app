@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  app:
+    image: voting_app:latest
+    build: .
+    environment:
+      - DISPLAY=:0.0
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    network_mode: host
